@@ -10,7 +10,7 @@ userRoute.get('/:id', getOneUser);
 userRoute.post('/register', register);
 userRoute.post('/login', passport.authenticate('local'), (req:Request, res:Response) => {
     res.status(200);
-    res.send({message: req.user})
+    res.send({message: req.user});
 });
 
 export default userRoute;
